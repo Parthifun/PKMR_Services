@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PKMR Services</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <h2>PKMR SERVICES</h2>
+            <span>Reliable Travel Solutions</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a class="active" href="/">HOME</a></li>
+            <li><a href="#">ABOUT US</a></li>
+            <li><a href="#">OUR FLEET</a></li>
+            <li><a href="#">SERVICES</a></li>
+            <li><a href="#">BOOK NOW</a></li>
+            <li><a href="#">CONTACT US</a></li>
+        </ul>
+
+        <div class="auth-buttons">
+            <a href="/login" class="signin">SIGN IN</a>
+            <a href="/register" class="signup">SIGN UP</a>
+        </div>
+
+    </nav>
+
+</header>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Reliable Travel Solutions</h1>
+
+        <h3>
+            Temple Tours • Airport Transfers • Family Travel
+        </h3>
+
+        <div class="line"></div>
+
+        <p>
+            Safe, comfortable and affordable rides for airport transfers,
+            temple visits, family vacations, weddings and special events.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#" class="book-btn">
+                BOOK YOUR RIDE
+            </a>
+
+            <a href="#" class="contact-btn">
+                CONTACT US
+            </a>
+
+        </div>
+
+        <div class="location">
+            📍 Tirupati, Andhra Pradesh
+        </div>
+
+    </div>
+
+</section>
+
+<section class="fleet">
+
+    <div class="section-title">
+        <h2>OUR FLEET</h2>
+        <p>Choose the perfect vehicle for your journey</p>
+    </div>
+
+    <div class="fleet-container">
+
+        <div class="car-card">
+            <img src="{{ url_for('static', filename='images/crysta.jpg') }}">
+            <h3>Toyota Innova Crysta</h3>
+            <p>7 Seater Premium Family Vehicle</p>
+        </div>
+
+        <div class="car-card">
+            <img src="{{ url_for('static', filename='images/fortuner.jpg') }}">
+            <h3>Toyota Fortuner</h3>
+            <p>Luxury SUV For Long Trips</p>
+        </div>
+
+        <div class="car-card">
+            <img src="{{ url_for('static', filename='images/etios.jpg') }}">
+            <h3>Toyota Etios</h3>
+            <p>Comfortable Daily Travel</p>
+        </div>
+
+        <div class="car-card">
+            <img src="{{ url_for('static', filename='images/hybrid.jpg') }}">
+            <h3>Toyota Hybrid</h3>
+            <p>Executive & Corporate Travel</p>
+        </div>
+
+        <div class="car-card">
+            <img src="{{ url_for('static', filename='images/swift.jpg') }}">
+            <h3>Suzuki Swift Dzire</h3>
+            <p>Budget Friendly Transportation</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+
+<section class="why-us">
+
+    <div class="section-title">
+        <h2>WHY CHOOSE PKMR SERVICES</h2>
+        <p>Your trusted travel partner</p>
+    </div>
+
+    <div class="features-container">
+
+        <div class="feature-card">
+            <h3>🚖 Professional Drivers</h3>
+            <p>Experienced and customer-friendly drivers for a safe journey.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>🛡 Safe Travel</h3>
+            <p>Your safety and comfort are our highest priorities.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>⏰ On-Time Pickup</h3>
+            <p>Punctual service for airport transfers and scheduled trips.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>💰 Affordable Pricing</h3>
+            <p>Transparent pricing with no hidden charges.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>🚗 Well-Maintained Vehicles</h3>
+            <p>Clean, comfortable, and regularly serviced vehicles.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>📞 24/7 Support</h3>
+            <p>Available anytime for bookings and customer assistance.</p>
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
