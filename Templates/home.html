@@ -82,31 +82,59 @@
 
     <div class="fleet-container">
 
-        <div class="car-card">
-            <img src="{{ url_for('static', filename='images/crysta.jpg') }}">
-            <h3>Toyota Innova Crysta</h3>
-            <p>7 Seater Premium Family Vehicle</p>
-        </div>
+        <div class="car-card"
+     onclick="openVehicle(
+     'Toyota Innova Crysta',
+     '7 Seater Premium Family Vehicle',
+     '{{ url_for('static', filename='images/crysta.jpg') }}'
+     )">
 
-        <div class="car-card">
+    <img src="{{ url_for('static', filename='images/crysta.jpg') }}">
+
+    <h3>Toyota Innova Crysta</h3>
+
+    <p>7 Seater Premium Family Vehicle</p>
+</div>
+
+        <div class="car-card"
+            onclick="openVehicle(
+            'Toyota Fortuner',
+            'Luxury SUV For Long Trips',
+            '{{ url_for('static', filename='images/fortuner.jpg') }}'
+        )">
             <img src="{{ url_for('static', filename='images/fortuner.jpg') }}">
             <h3>Toyota Fortuner</h3>
             <p>Luxury SUV For Long Trips</p>
         </div>
 
-        <div class="car-card">
+        <div class="car-card"
+            onclick="openVehicle(
+            'Toyota Etios',
+            'Comfortable Daily Travel',
+            '{{ url_for('static', filename='images/etios.jpg') }}'
+        )">
             <img src="{{ url_for('static', filename='images/etios.jpg') }}">
             <h3>Toyota Etios</h3>
             <p>Comfortable Daily Travel</p>
         </div>
 
-        <div class="car-card">
+        <div class="car-card"
+            onclick="openVehicle(
+            'Toyota Hycrossid',
+            'Executive & Corporate Travel',
+            '{{ url_for('static', filename='images/hybrid.jpg') }}'
+            )">
             <img src="{{ url_for('static', filename='images/hybrid.jpg') }}">
-            <h3>Toyota Hybrid</h3>
+            <h3>Toyota Hycrossid</h3>
             <p>Executive & Corporate Travel</p>
         </div>
 
-        <div class="car-card">
+        <div class="car-card"
+            onclick="openVehicle(
+            'Suzuki Swift',
+            'Budget Friendly Transportation',
+            '{{ url_for('static', filename='images/swift.jpg') }}'
+            )">
             <img src="{{ url_for('static', filename='images/swift.jpg') }}">
             <h3>Suzuki Swift Dzire</h3>
             <p>Budget Friendly Transportation</p>
@@ -114,7 +142,35 @@
 
     </div>
 </section>
+<!-- VEHICLE POPUP -->
 
+<div id="vehicleModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close-btn" onclick="closeVehicle()">&times;</span>
+
+        <img id="vehicleImage">
+
+        <h2 id="vehicleTitle"></h2>
+
+        <p id="vehicleDesc"></p>
+
+        <ul class="vehicle-features">
+            <li>✔ Professional Driver</li>
+            <li>✔ Air Conditioned Vehicle</li>
+            <li>✔ Temple Tours</li>
+            <li>✔ Airport Transfers</li>
+            <li>✔ Family Travel</li>
+        </ul>
+
+        <a href="#" class="book-btn">
+            BOOK NOW
+        </a>
+
+    </div>
+
+</div>
 <!-- WHY CHOOSE US -->
 
 <section class="why-us">
@@ -159,6 +215,30 @@
     </div>
 
 </section>
+<script>
 
+function openVehicle(title, desc, image){
+
+    document.getElementById("vehicleTitle").innerText = title;
+    document.getElementById("vehicleDesc").innerText = desc;
+    document.getElementById("vehicleImage").src = image;
+
+    document.getElementById("vehicleModal").style.display = "flex";
+}
+
+function closeVehicle(){
+    document.getElementById("vehicleModal").style.display = "none";
+}
+
+window.onclick = function(event){
+
+    const modal = document.getElementById("vehicleModal");
+
+    if(event.target === modal){
+        modal.style.display = "none";
+    }
+}
+
+</script>
 </body>
 </html>
