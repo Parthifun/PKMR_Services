@@ -40,6 +40,19 @@ def book():
     })
 
 
+@app.route("/fleet")
+def fleet():
+    return render_template("fleet.html")
+
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
+
+
 # ----------------------------------------
 # RUN APPLICATION
 # ----------------------------------------
