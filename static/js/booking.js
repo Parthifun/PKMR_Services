@@ -4,6 +4,16 @@
 
 const bookingData = {
 
+    service: "",
+
+    package: "",
+
+    packagePrice: "",
+
+    packageDuration: "",
+
+    packageRoute: "",
+
     travelDate: "",
 
     pickup: "",
@@ -22,10 +32,44 @@ const bookingData = {
 
     email: "",
 
+    vehiclePrice: 0,
+
     notes: ""
 
 };
 
+function calculateTotal() {
+
+    const basePrice =
+        parseInt(
+            bookingData.packagePrice.replace(/[^\d]/g, "")
+        ) || 0;
+
+    const vehicleAdjustment =
+        bookingData.vehiclePrice;
+
+    const total =
+        basePrice + vehicleAdjustment;
+
+    document.getElementById("packageBasePrice").innerText =
+        "₹" + basePrice;
+
+    if (vehicleAdjustment >= 0) {
+
+        document.getElementById("vehicleAdjustment").innerText =
+            "+ ₹" + vehicleAdjustment;
+
+    } else {
+
+        document.getElementById("vehicleAdjustment").innerText =
+            "- ₹" + Math.abs(vehicleAdjustment);
+
+    }
+
+    document.getElementById("totalAmount").innerText =
+        "₹" + total;
+
+}
 
 // ==========================================
 // ELEMENT REFERENCES
@@ -44,26 +88,117 @@ const vehicleCards = document.querySelectorAll(".vehicle-card");
 
 
 // ==========================================
-// MODAL FUNCTIONS
+// RESET BOOKING
 // ==========================================
 
-function openBooking(){
+function resetBooking() {
 
-    bookingModal.style.display="flex";
+    // Reset booking data
+    bookingData.travelDate = "";
+    bookingData.pickup = "";
+    bookingData.destination = "";
+    bookingData.pickupTime = "";
+    bookingData.passengers = "";
+    bookingData.vehicle = "";
+    bookingData.customerName = "";
+    bookingData.phone = "";
+    bookingData.email = "";
+    bookingData.notes = "";
+
+    // Reset Step 1 inputs
+    document.getElementById("travelDate").value = "";
+
+    // Reset Step 2 inputs
+    document.getElementById("pickup").value = "";
+    document.getElementById("destination").value = "";
+    document.getElementById("pickupTime").value = "";
+    document.getElementById("passengers").selectedIndex = 0;
+
+    // Reset Step 4 inputs
+    document.getElementById("customerName").value = "";
+    document.getElementById("customerPhone").value = "";
+    document.getElementById("customerEmail").value = "";
+    document.getElementById("customerNotes").value = "";
+
+    // Remove selected vehicle
+    vehicleCards.forEach(card => {
+        card.classList.remove("selected");
+    });
+
+    // Reset progress bar
+    step2.classList.remove("active-step");
+    step3.classList.remove("active-step");
+    step4.classList.remove("active-step");
+    step5.classList.remove("active-step");
+
+    step1.classList.add("active-step");
+
+    progressSteps.forEach(step => {
+        step.classList.remove("active");
+    });
+
+    progressSteps[0].classList.add("active");
 
 }
 
-function closeBooking(){
+// ==========================================
+// MODAL FUNCTIONS
+// ==========================================
 
-    bookingModal.style.display="none";
+function openBooking(service = "", packageName = "") {
+
+    if (service) {
+        bookingData.service = service;
+    }
+
+    if (packageName) {
+        bookingData.package = packageName;
+    }
+
+    document.getElementById("serviceType").value =
+        bookingData.service;
+
+    document.getElementById("selectedPackage").value =
+        bookingData.package;
+
+    // Show selected package details
+    document.getElementById("bookingPackageName").innerText =
+        bookingData.package;
+
+    document.getElementById("bookingPackagePrice").innerHTML =
+        "💰 <strong>Price:</strong> " + bookingData.packagePrice;
+
+    document.getElementById("bookingPackageDuration").innerHTML =
+        "🕒 <strong>Duration:</strong> " + bookingData.packageDuration;
+
+    document.getElementById("bookingPackageRoute").innerHTML =
+        "📍 <strong>Route:</strong> " + bookingData.packageRoute;
+
+    document.getElementById("pickup").value =
+        bookingData.pickup;
+
+    document.getElementById("destination").value =
+        bookingData.destination;
+
+    calculateTotal();
+
+    bookingModal.style.display = "flex";
+
+}
+
+
+
+function closeBooking() {
+
+    bookingModal.style.display = "none";
 
 }
 
 document.querySelector(".close-booking").onclick = closeBooking;
 
-window.onclick = function(e){
+window.onclick = function (e) {
 
-    if(e.target===bookingModal){
+    if (e.target === bookingModal) {
 
         closeBooking();
 
@@ -73,12 +208,12 @@ window.onclick = function(e){
 
 /* NEXT */
 
-document.getElementById("nextStep").onclick=function(){
+document.getElementById("nextStep").onclick = function () {
 
-    const travelDate=document.getElementById("travelDate").value;
+    const travelDate = document.getElementById("travelDate").value;
     bookingData.travelDate = travelDate;
 
-    if(travelDate===""){
+    if (travelDate === "") {
 
         alert("Please select your travel date.");
 
@@ -97,7 +232,7 @@ document.getElementById("nextStep").onclick=function(){
 
 /* BACK */
 
-document.getElementById("backStep1").onclick=function(){
+document.getElementById("backStep1").onclick = function () {
 
     step2.classList.remove("active-step");
 
@@ -112,7 +247,7 @@ document.getElementById("backStep1").onclick=function(){
 // STEP 2 → STEP 3
 // ==========================================
 
-document.getElementById("nextStep2").onclick = function(){
+document.getElementById("nextStep2").onclick = function () {
 
     bookingData.pickup = document.getElementById("pickup").value;
 
@@ -122,11 +257,11 @@ document.getElementById("nextStep2").onclick = function(){
 
     bookingData.passengers = document.getElementById("passengers").value;
 
-    if(
+    if (
         bookingData.pickup === "" ||
         bookingData.destination === "" ||
         bookingData.pickupTime === ""
-    ){
+    ) {
 
         alert("Please complete all journey details.");
 
@@ -150,7 +285,7 @@ document.getElementById("nextStep2").onclick = function(){
 
 vehicleCards.forEach(card => {
 
-    card.addEventListener("click", function(){
+    card.addEventListener("click", function () {
 
         // Remove previous selection
         vehicleCards.forEach(c => {
@@ -163,6 +298,11 @@ vehicleCards.forEach(card => {
         // Save vehicle
         bookingData.vehicle = this.dataset.vehicle;
 
+        bookingData.vehiclePrice =
+            Number(this.dataset.price);
+
+        calculateTotal();
+
         console.log(bookingData);
 
     });
@@ -173,7 +313,7 @@ vehicleCards.forEach(card => {
 // STEP 3 BACK BUTTON
 // ==========================================
 
-document.getElementById("backStep2").onclick = function(){
+document.getElementById("backStep2").onclick = function () {
 
     step3.classList.remove("active-step");
 
@@ -188,9 +328,9 @@ document.getElementById("backStep2").onclick = function(){
 // STEP 3 NEXT BUTTON
 // ==========================================
 
-document.getElementById("nextStep3").onclick = function(){
+document.getElementById("nextStep3").onclick = function () {
 
-    if(bookingData.vehicle === ""){
+    if (bookingData.vehicle === "") {
 
         alert("Please select a vehicle.");
 
@@ -212,7 +352,7 @@ document.getElementById("nextStep3").onclick = function(){
 // STEP 4 BACK BUTTON
 // ==========================================
 
-document.getElementById("backStep3").onclick = function(){
+document.getElementById("backStep3").onclick = function () {
 
     step4.classList.remove("active-step");
 
@@ -228,7 +368,7 @@ document.getElementById("backStep3").onclick = function(){
 // STEP 4 NEXT BUTTON
 // ==========================================
 
-document.getElementById("nextStep4").onclick = function(){
+document.getElementById("nextStep4").onclick = function () {
 
     bookingData.customerName =
         document.getElementById("customerName").value;
@@ -242,10 +382,10 @@ document.getElementById("nextStep4").onclick = function(){
     bookingData.notes =
         document.getElementById("customerNotes").value;
 
-    if(
+    if (
         bookingData.customerName === "" ||
         bookingData.phone === ""
-    ){
+    ) {
 
         alert("Please enter your name and phone number.");
 
@@ -254,6 +394,36 @@ document.getElementById("nextStep4").onclick = function(){
     }
 
     // Populate Summary
+
+    document.getElementById("summaryService").innerText =
+        bookingData.service || "Cab Booking";
+
+    document.getElementById("summaryPackage").innerText =
+        bookingData.package || "Not Applicable";
+
+    const packagePrice =
+        parseInt(bookingData.packagePrice.replace(/[^\d]/g, "")) || 0;
+
+    const total =
+        packagePrice + bookingData.vehiclePrice;
+
+    document.getElementById("summaryPackagePrice").innerText =
+        "₹" + packagePrice;
+
+    if (bookingData.vehiclePrice >= 0) {
+
+        document.getElementById("summaryVehiclePrice").innerText =
+            "+ ₹" + bookingData.vehiclePrice;
+
+    } else {
+
+        document.getElementById("summaryVehiclePrice").innerText =
+            "- ₹" + Math.abs(bookingData.vehiclePrice);
+
+    }
+
+    document.getElementById("summaryTotal").innerText =
+        "₹" + total;
 
     document.getElementById("summaryDate").innerText =
         bookingData.travelDate;
@@ -295,7 +465,7 @@ document.getElementById("nextStep4").onclick = function(){
 
 };
 
-document.getElementById("backStep4").onclick = function(){
+document.getElementById("backStep4").onclick = function () {
 
     step5.classList.remove("active-step");
 
@@ -307,7 +477,7 @@ document.getElementById("backStep4").onclick = function(){
 
 };
 
-document.getElementById("confirmBooking").onclick = function(){
+document.getElementById("confirmBooking").onclick = function () {
 
     console.log(bookingData);
 

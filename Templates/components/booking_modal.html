@@ -10,6 +10,24 @@
 
         <h2>Book Your Ride</h2>
 
+        <div class="selected-package-box">
+
+            <h3 id="bookingPackageName"></h3>
+
+            <p id="bookingPackagePrice"></p>
+
+            <p id="bookingPackageDuration"></p>
+
+            <p id="bookingPackageRoute"></p>
+
+        </div>
+
+        <!-- Hidden booking information -->
+
+        <input type="hidden" id="serviceType">
+        <input type="hidden" id="selectedPackage">
+
+
         <div class="progress-bar">
 
             <div class="progress-step active">
@@ -55,10 +73,7 @@
 
                 <label>Travel Date</label>
 
-                <input
-                    type="date"
-                    id="travelDate"
-                    min="{{ today if today else '' }}">
+                <input type="date" id="travelDate" min="{{ today if today else '' }}">
 
             </div>
 
@@ -103,10 +118,7 @@
 
                 <label>Pickup Location</label>
 
-                <input
-                    type="text"
-                    id="pickup"
-                    placeholder="Enter pickup location">
+                <input type="text" id="pickup" placeholder="Enter pickup location">
 
             </div>
 
@@ -114,10 +126,7 @@
 
                 <label>Destination</label>
 
-                <input
-                    type="text"
-                    id="destination"
-                    placeholder="Enter destination">
+                <input type="text" id="destination" placeholder="Enter destination">
 
             </div>
 
@@ -125,9 +134,7 @@
 
                 <label>Pickup Time</label>
 
-                <input
-                    type="time"
-                    id="pickupTime">
+                <input type="time" id="pickupTime">
 
             </div>
 
@@ -183,21 +190,24 @@
 
                 <!-- Crysta -->
 
-                <div class="vehicle-card"
-                    data-vehicle="Toyota Innova Crysta">
+                <div class="vehicle-card" data-vehicle="Toyota Innova Crysta" data-price="500">‰
 
                     <img src="{{ url_for('static', filename='images/crysta.jpg') }}">
 
                     <h3>Toyota Innova Crysta</h3>
 
                     <p>7 Seater Premium Family Vehicle</p>
+                    <p class="vehicle-price">
+
+                        + ₹500
+
+                    </p>
 
                 </div>
 
                 <!-- Fortuner -->
 
-                <div class="vehicle-card"
-                    data-vehicle="Toyota Fortuner">
+                <div class="vehicle-card" data-vehicle="Toyota Fortuner" data-price="1500">
 
                     <img src="{{ url_for('static', filename='images/fortuner.jpg') }}">
 
@@ -205,12 +215,17 @@
 
                     <p>Luxury SUV</p>
 
+                    <p class="vehicle-price">
+
+                        + ₹1500
+
+                    </p>
+
                 </div>
 
                 <!-- Ertiga -->
 
-                <div class="vehicle-card"
-                    data-vehicle="Toyota Ertiga">
+                <div class="vehicle-card" data-vehicle="Toyota Ertiga" data-price="0">
 
                     <img src="{{ url_for('static', filename='images/ertiga.jpg') }}">
 
@@ -218,12 +233,17 @@
 
                     <p>Comfortable Daily Travel</p>
 
+                    <p class="vehicle-price">
+
+                        Included
+
+                    </p>
+
                 </div>
 
                 <!-- Hycross -->
 
-                <div class="vehicle-card"
-                    data-vehicle="Toyota Hycross">
+                <div class="vehicle-card" data-vehicle="Toyota Hycross" data-price="1000">
 
                     <img src="{{ url_for('static', filename='images/hycross.jpg') }}">
 
@@ -231,19 +251,60 @@
 
                     <p>Executive Travel</p>
 
+                    <p class="vehicle-price">
+
+                        + ₹1000
+
+                    </p>
+
                 </div>
 
 
                 <!-- Swift -->
 
-                <div class="vehicle-card"
-                    data-vehicle="Suzuki Swift Dzire">
+                <div class="vehicle-card" data-vehicle="Suzuki Swift Dzire" data-price="-300">
 
                     <img src="{{ url_for('static', filename='images/suzuki.jpg') }}">
 
                     <h3>Suzuki Swift Dzire</h3>
 
                     <p>Budget Friendly</p>
+
+                    <p class="vehicle-price">
+
+                        + ₹300
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="price-summary">
+
+                <div class="price-row">
+
+                    <span>Package Price</span>
+
+                    <span id="packageBasePrice">₹0</span>
+
+                </div>
+
+                <div class="price-row">
+
+                    <span>Vehicle Adjustment</span>
+
+                    <span id="vehicleAdjustment">₹0</span>
+
+                </div>
+
+                <hr>
+
+                <div class="price-row total-row">
+
+                    <span>Total Amount</span>
+
+                    <span id="totalAmount">₹0</span>
 
                 </div>
 
@@ -279,10 +340,7 @@
 
                 <label>Full Name</label>
 
-                <input
-                    type="text"
-                    id="customerName"
-                    placeholder="Enter your full name">
+                <input type="text" id="customerName" placeholder="Enter your full name">
 
             </div>
 
@@ -290,10 +348,7 @@
 
                 <label>Mobile Number</label>
 
-                <input
-                    type="tel"
-                    id="customerPhone"
-                    placeholder="+91 XXXXX XXXXX">
+                <input type="tel" id="customerPhone" placeholder="+91 XXXXX XXXXX">
 
             </div>
 
@@ -301,10 +356,7 @@
 
                 <label>Email Address (Optional)</label>
 
-                <input
-                    type="email"
-                    id="customerEmail"
-                    placeholder="example@gmail.com">
+                <input type="email" id="customerEmail" placeholder="example@gmail.com">
 
             </div>
 
@@ -312,26 +364,20 @@
 
                 <label>Special Requests</label>
 
-                <textarea
-                    id="customerNotes"
-                    rows="5"
+                <textarea id="customerNotes" rows="5"
                     placeholder="Temple Darshan, Extra Luggage, Child Seat, etc."></textarea>
 
             </div>
 
             <div class="booking-footer">
 
-                <button
-                    class="back-btn"
-                    id="backStep3">
+                <button class="back-btn" id="backStep3">
 
                     ← BACK
 
                 </button>
 
-                <button
-                    class="next-btn"
-                    id="nextStep4">
+                <button class="next-btn" id="nextStep4">
 
                     NEXT →
 
@@ -354,6 +400,33 @@
             </p>
 
             <div class="summary-box">
+
+                <div class="summary-item">
+                    <strong>Service</strong>
+                    <span id="summaryService"></span>
+                </div>
+
+                <div class="summary-item">
+                    <strong>Package</strong>
+                    <span id="summaryPackage"></span>
+                </div>
+
+                <div class="summary-item">
+                    <strong>Package Price</strong>
+                    <span id="summaryPackagePrice"></span>
+                </div>
+
+                <div class="summary-item">
+                    <strong>Vehicle Adjustment</strong>
+                    <span id="summaryVehiclePrice"></span>
+                </div>
+
+                <div class="summary-item total-price">
+                    <strong>Total Amount</strong>
+                    <span id="summaryTotal"></span>
+                </div>
+
+                <hr>
 
                 <div class="summary-item">
                     <strong>Travel Date</strong>
@@ -423,4 +496,4 @@
 
         </div>
     </div>
-</div>  
+</div>

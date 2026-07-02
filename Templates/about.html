@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | PKMR Services</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/about.css') }}">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    {% include "components/navbar.html" %}
+
+    <!-- HERO -->
+
+    <section class="about-hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <p class="hero-tag">
+                ABOUT PKMR SERVICES
+            </p>
+
+            <h1>
+                Your Trusted Travel Partner
+                Across South India
+            </h1>
+
+            <p>
+                Safe journeys, professional drivers,
+                comfortable vehicles, and unforgettable
+                pilgrimage experiences.
+            </p>
+
+        </div>
+
+    </section>
+
+    {% include "components/footer.html" %}
+
+</body>
+
+</html>

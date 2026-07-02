@@ -482,3 +482,103 @@
 
     margin:20px 0;
 }
+
+.selected-package-box{
+
+    background:#fff8e8;
+
+    border-left:6px solid #d4af37;
+
+    border-radius:12px;
+
+    padding:20px;
+
+    margin:20px 0 30px;
+
+}
+
+.selected-package-box h3{
+
+    color:#222;
+
+    font-size:24px;
+
+    margin-bottom:15px;
+
+}
+
+.selected-package-box p{
+
+    margin:8px 0;
+
+    font-size:16px;
+
+    color:#555;
+
+}
+
+.vehicle-price{
+
+    margin-top:10px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    color:#d4af37;
+
+}
+
+.price-summary{
+
+    margin-top:30px;
+
+    background:#fff;
+
+    border-radius:12px;
+
+    padding:20px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.price-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin:12px 0;
+
+    font-size:17px;
+
+}
+
+.total-row{
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    color:#d4af37;
+
+}
+
+.total-price{
+
+    margin-top:15px;
+
+    font-size:22px;
+
+    color:#d4af37;
+
+    font-weight:bold;
+
+}
+
+.total-price span{
+
+    color:#d4af37;
+
+}

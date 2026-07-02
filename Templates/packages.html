@@ -9,7 +9,6 @@
 
     <title>Temple Tour Packages | PKMR Services</title>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/packages.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/booking.css') }}">
 
@@ -180,35 +179,6 @@
 
         <div class="package-grid">
 
-            <div class="package-card">
-
-                <img src="{{ url_for('static', filename='images/tirupati-package.jpg') }}" alt="Tirupati Explorer">
-
-                <div class="package-content">
-
-                    <h3>Tirupati Explorer Package</h3>
-
-                    <p>
-                        Explore the spiritual, historical and cultural attractions
-                        of Tirupati with a customized itinerary.
-                    </p>
-
-                    <div class="package-meta">
-
-                        <span>🕒 1–2 Days</span>
-
-                        <span>🚗 Private Vehicle</span>
-
-                    </div>
-
-                    <button class="view-btn" onclick="openTirupatiPackage()">
-                        View Details
-                    </button>
-
-                </div>
-
-            </div>
-
             <!-- PACKAGE 1 -->
 
             <div class="package-card">
@@ -376,15 +346,13 @@
 
     {% include "components/package_modal.html" %}
     {% include "components/booking_modal.html" %}
+
     {% include "components/footer.html" %}
-    
 
 
     <script src="{{ url_for('static', filename='js/packages.js') }}"></script>
     <script src="{{ url_for('static', filename='js/booking.js') }}"></script>
 
-
-    
 </body>
 
 </html>

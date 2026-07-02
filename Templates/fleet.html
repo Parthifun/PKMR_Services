@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Fleet | PKMR Services</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fleet.css') }}">
+
+</head>
+
+<body>
+
+    {% include "components/navbar.html" %}
+
+    <!-- HERO -->
+
+    <section class="fleet-hero">
+
+        <div class="hero-content">
+
+            <p class="hero-tag">
+                PREMIUM VEHICLES
+            </p>
+
+            <h1>
+                Our Fleet
+            </h1>
+
+            <div class="gold-line"></div>
+
+            <p>
+
+                Comfortable, clean and well-maintained
+                vehicles for every journey.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- VEHICLES -->
+
+    <section class="fleet-section">
+
+        <div class="section-title">
+
+            <h2>Choose Your Vehicle</h2>
+
+            <p>
+
+                Every vehicle is sanitized,
+                GPS enabled and driven by experienced drivers.
+
+            </p>
+
+        </div>
+
+        <div class="fleet-grid">
+
+            <div class="fleet-grid">
+
+                <!-- CRYSTA -->
+
+                <div class="fleet-card">
+
+                    <img src="{{ url_for('static', filename='images/crysta.jpg') }}" alt="Toyota Innova Crysta">
+
+                    <div class="fleet-content">
+
+                        <h3>Toyota Innova Crysta</h3>
+
+                        <div class="rating">★★★★★</div>
+
+                        <div class="fleet-features">
+                            <span>👥 7 Seats</span>
+                            <span>❄ AC</span>
+                            <span>🧳 4 Bags</span>
+                            <span>📍 GPS</span>
+                        </div>
+
+                        <div class="fleet-price">
+                            <p>Starting From</p>
+                            <h2>₹18/km</h2>
+                        </div>
+
+                        <button class="fleet-btn">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- FORTUNER -->
+
+                <div class="fleet-card">
+
+                    <img src="{{ url_for('static', filename='images/fortuner.jpg') }}" alt="Toyota Fortuner">
+
+                    <div class="fleet-content">
+
+                        <h3>Toyota Fortuner</h3>
+
+                        <div class="rating">★★★★★</div>
+
+                        <div class="fleet-features">
+                            <span>👥 7 Seats</span>
+                            <span>🏔 SUV</span>
+                            <span>🧳 4 Bags</span>
+                            <span>📍 GPS</span>
+                        </div>
+
+                        <div class="fleet-price">
+                            <p>Starting From</p>
+                            <h2>₹25/km</h2>
+                        </div>
+
+                        <button class="fleet-btn">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- HYCROSS -->
+
+                <div class="fleet-card">
+
+                    <img src="{{ url_for('static', filename='images/hycross.jpg') }}" alt="Toyota Hycross">
+
+                    <div class="fleet-content">
+
+                        <h3>Toyota Hycross</h3>
+
+                        <div class="rating">★★★★★</div>
+
+                        <div class="fleet-features">
+                            <span>👥 7 Seats</span>
+                            <span>⚡ Hybrid</span>
+                            <span>🧳 4 Bags</span>
+                            <span>📍 GPS</span>
+                        </div>
+
+                        <div class="fleet-price">
+                            <p>Starting From</p>
+                            <h2>₹20/km</h2>
+                        </div>
+
+                        <button class="fleet-btn">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- SWIFT -->
+
+                <div class="fleet-card">
+
+                    <img src="{{ url_for('static', filename='images/dzire.jpg') }}" alt="Swift Dzire">
+
+                    <div class="fleet-content">
+
+                        <h3>Suzuki Swift Dzire</h3>
+
+                        <div class="rating">★★★★☆</div>
+
+                        <div class="fleet-features">
+                            <span>👥 4 Seats</span>
+                            <span>💰 Budget</span>
+                            <span>🧳 2 Bags</span>
+                            <span>📍 GPS</span>
+                        </div>
+
+                        <div class="fleet-price">
+                            <p>Starting From</p>
+                            <h2>₹14/km</h2>
+                        </div>
+
+                        <button class="fleet-btn">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- ERTIGA -->
+
+                <div class="fleet-card">
+
+                    <img src="{{ url_for('static', filename='images/ertiga.jpg') }}" alt="Maruti Suzuki Ertiga">
+
+                    <div class="fleet-content">
+
+                        <h3>Maruti Suzuki Ertiga</h3>
+
+                        <div class="rating">★★★★☆</div>
+
+                        <div class="fleet-features">
+
+                            <span>👥 7 Seats</span>
+
+                            <span>❄ Air Conditioned</span>
+
+                            <span>🧳 3 Bags</span>
+
+                            <span>📍 GPS Enabled</span>
+
+                        </div>
+
+                        <div class="fleet-price">
+
+                            <p>Starting From</p>
+
+                            <h2>₹16/km</h2>
+
+                        </div>
+
+                        <button class="fleet-btn">
+
+                            View Details
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- ETIOS -->
+
+                <div class="fleet-card">
+
+                    <img src="{{ url_for('static', filename='images/etios.jpg') }}" alt="Toyota Etios">
+
+                    <div class="fleet-content">
+
+                        <h3>Toyota Etios</h3>
+
+                        <div class="rating">★★★★☆</div>
+
+                        <div class="fleet-features">
+                            <span>👥 4 Seats</span>
+                            <span>🚘 Sedan</span>
+                            <span>🧳 2 Bags</span>
+                            <span>📍 GPS</span>
+                        </div>
+
+                        <div class="fleet-price">
+                            <p>Starting From</p>
+                            <h2>₹15/km</h2>
+                        </div>
+
+                        <button class="fleet-btn">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    {% include "components/vehicle_modal.html" %}
+    {% include "components/footer.html" %}
+
+    <script src="{{ url_for('static', filename='js/fleet.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='js/booking.js') }}"></script>
+
+</body>
+
+</html>
