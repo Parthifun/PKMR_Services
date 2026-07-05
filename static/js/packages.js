@@ -39,6 +39,18 @@ function closePackage() {
 
 }
 
+function openTirupatiPackage() {
+
+    document.getElementById("tirupatiModal").style.display = "flex";
+
+}
+
+function closeTirupatiPackage() {
+
+    document.getElementById("tirupatiModal").style.display = "none";
+
+}
+
 // ==========================================
 // BOOK SELECTED PACKAGE
 // ==========================================
