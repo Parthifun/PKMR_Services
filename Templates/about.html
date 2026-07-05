@@ -5,17 +5,12 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>About Us | PKMR Services</title>
 
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='css/about.css') }}">
-
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
 </head>
 
 <body>
@@ -26,24 +21,351 @@
 
     <section class="about-hero">
 
-        <div class="hero-overlay"></div>
+        <div class="about-overlay">
 
-        <div class="hero-content">
+            <h4>ABOUT PKMR SERVICES</h4>
 
-            <p class="hero-tag">
-                ABOUT PKMR SERVICES
-            </p>
+            <h1>Your Trusted Travel Partner</h1>
 
-            <h1>
-                Your Trusted Travel Partner
-                Across South India
-            </h1>
+            <h2>Across Andhra Pradesh & South India</h2>
+
+            <div class="hero-line"></div>
 
             <p>
-                Safe journeys, professional drivers,
-                comfortable vehicles, and unforgettable
-                pilgrimage experiences.
+
+                Temple Tours • Tourist Places • Airport Transfers •
+                Wedding Transportation • Family Tours
+
             </p>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+     WHO WE ARE
+========================== -->
+
+    <section class="who-we-are">
+
+        <div class="about-container">
+
+            <div class="about-image">
+
+                <img src="{{ url_for('static', filename='images/tirupati.jpg') }}" alt="PKMR Services">
+
+            </div>
+
+            <div class="about-content">
+
+                <span class="section-tag">
+                    WHO WE ARE
+                </span>
+
+                <h2>
+                    Your Journey Begins with PKMR Services
+                </h2>
+
+                <p>
+
+                    PKMR Services is your trusted travel partner for safe,
+                    comfortable and memorable journeys across Andhra Pradesh
+                    and South India.
+
+                </p>
+
+                <p>
+
+                    We specialize in temple tours, tourist destinations,
+                    airport transfers, wedding transportation, family trips,
+                    local taxi services and customized travel experiences.
+                    Our professional drivers and well-maintained vehicles
+                    ensure every journey is smooth and enjoyable.
+
+                </p>
+
+                <div class="about-highlights">
+
+                    <div>🛕 Temple Tours</div>
+
+                    <div>🏞 Tourist Places</div>
+
+                    <div>✈ Airport Transfers</div>
+
+                    <div>💍 Wedding Transportation</div>
+
+                    <div>🚖 Local Taxi</div>
+
+                    <div>🌄 Outstation Trips</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===========================
+     OUR SERVICES
+=========================== -->
+
+    <section class="services-section">
+
+        <div class="section-heading">
+
+            <span>OUR SERVICES</span>
+
+            <h2>Travel Solutions for Every Journey</h2>
+
+            <p>
+
+                Whether you're planning a spiritual pilgrimage,
+                family vacation, airport transfer or wedding,
+                PKMR Services has the perfect travel solution.
+
+            </p>
+
+        </div>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+
+                <div class="service-icon">🛕</div>
+
+                <h3>Temple Tours</h3>
+
+                <p>
+                    Comfortable travel to Tirumala, Sri Kalahasti,
+                    Kanipakam and other famous temples.
+                </p>
+
+            </div>
+
+            <div class="service-card">
+
+                <div class="service-icon">🏞</div>
+
+                <h3>Tourist Places</h3>
+
+                <p>
+                    Explore waterfalls, forts, hill stations and
+                    beautiful sightseeing destinations.
+                </p>
+
+            </div>
+
+            <div class="service-card">
+
+                <div class="service-icon">✈</div>
+
+                <h3>Airport Transfers</h3>
+
+                <p>
+                    Reliable pickup and drop services with
+                    professional drivers.
+                </p>
+
+            </div>
+
+            <div class="service-card">
+
+                <div class="service-icon">💍</div>
+
+                <h3>Wedding Transportation</h3>
+
+                <p>
+                    Luxury vehicles for weddings,
+                    family events and celebrations.
+                </p>
+
+            </div>
+
+            <div class="service-card">
+
+                <div class="service-icon">🚖</div>
+
+                <h3>Local Taxi Services</h3>
+
+                <p>
+                    Flexible taxi services for local travel,
+                    shopping and daily transportation.
+                </p>
+
+            </div>
+
+            <div class="service-card">
+
+                <div class="service-icon">🌄</div>
+
+                <h3>Outstation Trips</h3>
+
+                <p>
+                    Comfortable travel across Andhra Pradesh,
+                    Tamil Nadu, Karnataka and beyond.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===========================
+     WHY CHOOSE US
+=========================== -->
+
+    <section class="why-section">
+
+        <div class="section-heading">
+
+            <span>WHY CHOOSE US</span>
+
+            <h2>Experience Travel with Confidence</h2>
+
+            <p>
+
+                We are committed to making every journey safe,
+                comfortable and memorable with professional
+                service and customer satisfaction.
+
+            </p>
+
+        </div>
+
+        <div class="why-grid">
+
+            <div class="why-card">
+
+                <div class="why-icon">🛡</div>
+
+                <h3>Safe & Secure</h3>
+
+                <p>
+                    Your safety is our highest priority on every journey.
+                </p>
+
+            </div>
+
+            <div class="why-card">
+
+                <div class="why-icon">🚗</div>
+
+                <h3>Premium Fleet</h3>
+
+                <p>
+                    Well-maintained, clean and comfortable vehicles.
+                </p>
+
+            </div>
+
+            <div class="why-card">
+
+                <div class="why-icon">👨‍✈️</div>
+
+                <h3>Professional Drivers</h3>
+
+                <p>
+                    Experienced drivers with excellent local knowledge.
+                </p>
+
+            </div>
+
+            <div class="why-card">
+
+                <div class="why-icon">💰</div>
+
+                <h3>Transparent Pricing</h3>
+
+                <p>
+                    Affordable pricing with no hidden charges.
+                </p>
+
+            </div>
+
+            <div class="why-card">
+
+                <div class="why-icon">🕒</div>
+
+                <h3>On-Time Service</h3>
+
+                <p>
+                    We value your time with punctual pickups and drops.
+                </p>
+
+            </div>
+
+            <div class="why-card">
+
+                <div class="why-icon">📍</div>
+
+                <h3>Customized Trips</h3>
+
+                <p>
+                    Flexible travel plans tailored to your needs.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===========================
+     JOURNEY IN NUMBERS
+=========================== -->
+
+    <section class="stats-section">
+
+        <div class="section-heading">
+
+            <span>OUR ACHIEVEMENTS</span>
+
+            <h2>Journey in Numbers</h2>
+
+            <p>
+
+                Every journey reflects our commitment to delivering
+                safe, reliable and memorable travel experiences.
+
+            </p>
+
+        </div>
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+
+                <h3>5000+</h3>
+
+                <p>Happy Customers</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h3>15+</h3>
+
+                <p>Premium Vehicles</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h3>100+</h3>
+
+                <p>Temple & Tour Packages</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h3>24/7</h3>
+
+                <p>Customer Support</p>
+
+            </div>
 
         </div>
 

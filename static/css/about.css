@@ -1,0 +1,515 @@
+/* ==========================================
+   ABOUT PAGE
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#fff;
+    color:#333;
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.about-hero{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url("../images/tirupati.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    color:#fff;
+
+}
+
+.about-overlay{
+
+    max-width:1000px;
+    padding:20px;
+
+}
+
+.about-overlay h4{
+
+    color:#d4af37;
+
+    letter-spacing:4px;
+
+    font-size:20px;
+
+    margin-bottom:20px;
+
+}
+
+.about-overlay h1{
+
+    font-size:72px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+    color:#fff;
+
+}
+
+.about-overlay h2{
+
+    font-size:42px;
+
+    font-weight:300;
+
+    margin-bottom:25px;
+
+    color:#fff;
+
+}
+
+.hero-line{
+
+    width:120px;
+
+    height:4px;
+
+    background:#d4af37;
+
+    margin:25px auto;
+
+}
+
+.about-overlay p{
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    color:#fff;
+
+}
+
+/* ==========================================
+   WHO WE ARE
+========================================== */
+
+.who-we-are{
+
+    padding:100px 8%;
+
+    background:#fff;
+
+}
+
+.about-container{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:70px;
+
+    flex-wrap:wrap;
+
+}
+
+.about-image{
+
+    flex:1;
+
+}
+
+.about-image img{
+
+    width:100%;
+
+    border-radius:18px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+}
+
+.about-content{
+
+    flex:1;
+
+}
+
+.section-tag{
+
+    color:#d4af37;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    font-size:16px;
+
+}
+
+.about-content h2{
+
+    font-size:48px;
+
+    margin:20px 0;
+
+    color:#222;
+
+}
+
+.about-content p{
+
+    font-size:18px;
+
+    color:#666;
+
+    line-height:1.9;
+
+    margin-bottom:22px;
+
+}
+
+.about-highlights{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    margin-top:35px;
+
+}
+
+.about-highlights div{
+
+    padding:18px;
+
+    background:#fafafa;
+
+    border-left:4px solid #d4af37;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.about-highlights div:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+
+.about-overlay h1{
+
+    font-size:52px;
+
+}
+
+.about-overlay h2{
+
+    font-size:30px;
+
+}
+
+.about-overlay p{
+
+    font-size:18px;
+
+}
+
+.about-container{
+
+    flex-direction:column;
+
+}
+
+.about-highlights{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+/* ==========================
+   OUR SERVICES
+========================== */
+
+.services-section{
+
+    padding:100px 8%;
+
+    background:#f9f9f9;
+
+}
+
+.section-heading{
+
+    text-align:center;
+
+    max-width:850px;
+
+    margin:auto;
+
+    margin-bottom:70px;
+
+}
+
+.section-heading span{
+
+    color:#d4af37;
+
+    letter-spacing:3px;
+
+    font-weight:700;
+
+}
+
+.section-heading h2{
+
+    font-size:46px;
+
+    margin:20px 0;
+
+    color:#222;
+
+}
+
+.section-heading p{
+
+    font-size:18px;
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+.services-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:35px;
+
+}
+
+.service-card{
+
+    background:#fff;
+
+    padding:40px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.service-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.service-icon{
+
+    font-size:55px;
+
+    margin-bottom:20px;
+
+}
+
+.service-card h3{
+
+    margin-bottom:18px;
+
+    font-size:24px;
+
+}
+
+.service-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+/* ==========================
+   WHY CHOOSE US
+========================== */
+
+.why-section{
+
+    padding:100px 8%;
+
+    background:#fff;
+
+}
+
+.why-grid{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.why-card{
+
+    width:300px;
+
+    background:#fafafa;
+
+    padding:35px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    border:1px solid #eee;
+
+}
+
+.why-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
+
+    border-color:#d4af37;
+
+}
+
+.why-icon{
+
+    font-size:55px;
+
+    margin-bottom:20px;
+
+}
+
+.why-card h3{
+
+    margin-bottom:15px;
+
+    color:#222;
+
+}
+
+.why-card p{
+
+    color:#666;
+
+    line-height:1.7;
+
+}
+
+/* ==========================
+   JOURNEY IN NUMBERS
+========================== */
+
+.stats-section{
+
+    padding:100px 8%;
+
+    background:#f8f8f8;
+
+}
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.stat-card{
+
+    background:#fff;
+
+    padding:40px;
+
+    text-align:center;
+
+    border-radius:18px;
+
+    transition:.35s;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+}
+
+.stat-card h3{
+
+    font-size:52px;
+
+    color:#d4af37;
+
+    margin-bottom:15px;
+
+}
+
+.stat-card p{
+
+    font-size:18px;
+
+    color:#555;
+
+    font-weight:600;
+
+}

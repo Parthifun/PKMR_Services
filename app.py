@@ -54,7 +54,9 @@ def book():
         "message": "Booking received successfully."
     })
 
-
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
 # ==========================================
 # RUN APPLICATION
 # ==========================================
