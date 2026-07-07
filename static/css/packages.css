@@ -16,38 +16,124 @@ body{
 
 }
 
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        rgba(0,0,0,.60),
+        rgba(0,0,0,.55)
+    );
+
+    z-index:2;
+
+}
+
 /* HERO */
 
 .packages-hero{
 
+    position:relative;
+
     height:100vh;
 
-    background:
-    linear-gradient(rgba(0,0,0,.55),
-    rgba(0,0,0,.55)),
-    url("../images/route.jpg");
+    overflow:hidden;
+
+}
+
+.hero-slider{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:1;
+
+}
+
+.slide{
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:0;
+
+    transition:opacity 1.5s ease-in-out;
 
     background-size:cover;
 
-    background-position:center;
+    background-position:center top;
 
-    display:flex;
+    background-repeat:no-repeat;
 
-    justify-content:center;
+}
 
-    align-items:center;
+.slide.active{
 
-    text-align:center;
+    opacity:1;
 
-    color:white;
+}
+
+/* Temple Images */
+
+.slide:nth-child(1){
+
+    background-image:url("../images/Tirumala.jpg");
+
+}
+
+.slide:nth-child(2){
+
+    background-image:url("../images/Kalahasthi.jpg");
+
+}
+
+.slide:nth-child(3){
+
+    background-image:url("../images/Padmavathi.jpg");
+
+}
+
+.slide:nth-child(4){
+
+    background-image:url("../images/Kanipakam.jpg");
+
+}
+
+.slide:nth-child(5){
+
+    background-image:url("../images/KalyanaVenkateshwara.jpg");
+
+}
+
+.slide:nth-child(6){
+
+    background-image:url("../images/Iskcon.jpg");
 
 }
 
 .hero-content{
 
-    width:90%;
+    position:relative;
 
-    max-width:900px;
+    z-index:3;
+
+    max-width:1200px;
+
+    width:100%;
+
+    margin:auto;
+
+    padding-top:120px;
+
+    padding-left:30px;
+
+    padding-right:30px;
+
+    text-align:center;
 
 }
 
@@ -55,17 +141,29 @@ body{
 
     color:#d4af37;
 
-    letter-spacing:4px;
+    font-size:1rem;
 
-    margin-bottom:20px;
+    letter-spacing:6px;
+
+    text-transform:uppercase;
+
+    margin-bottom:15px;
 
 }
 
 .hero-content h1{
 
-    font-size:60px;
+    max-width:900px;
 
-    margin-bottom:20px;
+    margin:25px auto;
+
+    font-size:clamp(3.2rem,5vw,5.5rem);
+
+    line-height:1.15;
+
+    font-weight:800;
+
+    text-shadow:0 5px 18px rgba(0,0,0,.45);
 
 }
 
@@ -83,21 +181,31 @@ body{
 
 .hero-content p{
 
-    font-size:20px;
+    max-width:700px;
 
-    line-height:1.8;
+    margin:20px auto;
+
+    font-size:1.25rem;
+
+    line-height:1.7;
+
+    color:#f5f5f5;
 
 }
 
 .hero-buttons{
 
-    margin-top:40px;
-
     display:flex;
 
     justify-content:center;
 
-    gap:20px;
+    align-items:center;
+
+    gap:25px;
+
+    margin-top:45px;
+
+    flex-wrap:wrap;
 
 }
 
@@ -143,37 +251,66 @@ body{
 
     width:90%;
 
-    max-width:1100px;
+    max-width:1200px;
 
-    margin:-70px auto 80px;
+    margin:-110px auto 80px;
+
+    position:relative;
+
+    z-index:100;
 
 }
 
 .stat-box{
 
-    background:white;
+    background:#fff;
 
-    padding:35px;
+    border-radius:20px;
+
+    padding:40px 25px;
 
     text-align:center;
 
-    border-radius:18px;
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
 
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    min-height:180px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
 
 }
 
+.stat-box:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
 .stat-box h2{
 
-    color:#d4af37;
+    margin:0;
 
-    font-size:42px;
+    font-size:52px;
+
+    color:#d4af37;
 
 }
 
 .stat-box p{
 
-    margin-top:10px;
+    margin-top:12px;
+
+    margin-bottom:0;
+
+    font-size:18px;
+
+    color:#555;
 
 }
 
@@ -835,3 +972,38 @@ body{
 
 }
 
+.navbar{
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+}
+
+.slide{
+
+    animation:zoomHero 6s linear infinite;
+
+}
+
+@keyframes zoomHero{
+
+    from{
+
+        transform:scale(1);
+
+    }
+
+    to{
+
+        transform:scale(1.08);
+
+    }
+
+}
