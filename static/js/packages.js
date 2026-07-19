@@ -5,7 +5,7 @@
 // ==========================================
 
 function openPackage(
-    
+
     title, price, duration, route, image, includes) {
 
     document.getElementById("packageTitle").innerText = title;
@@ -23,7 +23,7 @@ function openPackage(
 
     let html = "";
 
-    includes.forEach(function(item) {
+    includes.forEach(function (item) {
         html += `<li>${item}</li>`;
     });
 
@@ -102,7 +102,7 @@ function bookSelectedPackage() {
 
 }
 
-window.onclick = function(event) {
+window.onclick = function (event) {
 
     const modal = document.getElementById("packageModal");
 
@@ -128,7 +128,7 @@ setInterval(() => {
 
     currentSlide++;
 
-    if(currentSlide >= slides.length){
+    if (currentSlide >= slides.length) {
 
         currentSlide = 0;
 
@@ -136,4 +136,96 @@ setInterval(() => {
 
     slides[currentSlide].classList.add("active");
 
-},5000);
+}, 5000);
+
+function openTourDetails(packageName){
+
+    const pkg = packageData[packageName];
+
+    if(!pkg) return;
+
+    document.getElementById("tourTitle").innerHTML = pkg.title;
+
+    document.getElementById("tourDuration").innerHTML = pkg.duration;
+
+    let vehicles = "";
+
+    pkg.vehicles.forEach(vehicle => {
+
+        vehicles += `<li>${vehicle}</li>`;
+
+    });
+
+    document.getElementById("tourVehicles").innerHTML = vehicles;
+
+    let places = "";
+
+    pkg.places.forEach(place => {
+
+        places += `<li>${place}</li>`;
+
+    });
+
+    document.getElementById("tourPlaces").innerHTML = places;
+
+    let includes = "";
+
+    pkg.includes.forEach(item => {
+
+        includes += `<li>${item}</li>`;
+
+    });
+
+    document.getElementById("tourIncludes").innerHTML = includes;
+
+    document.getElementById("tourModal").style.display = "flex";
+
+}
+
+function closeTourModal(){
+
+    document.getElementById("tourModal").style.display = "none";
+
+}
+
+window.addEventListener("click", function(event){
+
+    const modal = document.getElementById("tourModal");
+
+    if(event.target === modal){
+
+        closeTourModal();
+
+    }
+
+});
+
+/* ==========================================
+   SORT DESTINATIONS ALPHABETICALLY
+========================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const tourGrid = document.getElementById("tourGrid");
+
+    if (!tourGrid) return;
+
+    const cards = Array.from(tourGrid.querySelectorAll(".tour-card"));
+
+    cards.sort((a, b) => {
+
+        return a.dataset.name.localeCompare(
+            b.dataset.name,
+            undefined,
+            { sensitivity: "base" }
+        );
+
+    });
+
+    cards.forEach(card => {
+
+        tourGrid.appendChild(card);
+
+    });
+
+});

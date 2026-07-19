@@ -197,7 +197,7 @@
 
                 <div class="package-image">
 
-                    <img src="{{ url_for('static', filename='images/tirumala.jpg') }}" alt="Tirumala Darshan Package">
+                    <img src="{{ url_for('static', filename='images/Thirumala.jpg') }}" alt="Tirumala Darshan Package">
                 </div>
 
                 <div class="package-content">
@@ -211,11 +211,11 @@
 
                     <ul>
 
-                        <li>✔ Tirupati → Tirumala → Return</li>
-                        <li>✔ Premium Driver</li>
-                        <li>✔ Toll Included</li>
-                        <li>✔ Parking Included</li>
-                        <li>✔ Fuel Included</li>
+                        <li>• Tirupati → Tirumala → Return</li>
+                        <li>• Premium Driver</li>
+                        <li>• Toll Included</li>
+                        <li>• Parking Included</li>
+                        <li>• Fuel Included</li>
 
                     </ul>
 
@@ -263,11 +263,11 @@
 
                     <ul>
 
-                        <li>✔ Govindaraja Swamy</li>
-                        <li>✔ Kapila Theertham</li>
-                        <li>✔ ISKCON</li>
-                        <li>✔ Padmavathi Temple</li>
-                        <li>✔ Driver Included</li>
+                        <li>• Govindaraja Swamy</li>
+                        <li>• Kapila Theertham</li>
+                        <li>• ISKCON</li>
+                        <li>• Padmavathi Temple</li>
+                        <li>• Driver Included</li>
 
                     </ul>
 
@@ -299,6 +299,7 @@
             <!-- PACKAGE 3 -->
 
             <div class="package-card">
+
                 <div class="package-image">
 
                     <img src="{{ url_for('static', filename='images/kalahasti.jpg') }}" alt="Sri Kalahasti Package">
@@ -315,11 +316,11 @@
 
                     <ul>
 
-                        <li>✔ Tirupati → Kalahasti</li>
-                        <li>✔ Rahu Ketu Temple</li>
-                        <li>✔ Toll Included</li>
-                        <li>✔ Parking Included</li>
-                        <li>✔ Fuel Included</li>
+                        <li>• Tirupati → Kalahasti</li>
+                        <li>• Rahu Ketu Temple</li>
+                        <li>• Toll Included</li>
+                        <li>• Parking Included</li>
+                        <li>• Fuel Included</li>
 
                     </ul>
 
@@ -348,12 +349,533 @@
 
             </div>
 
+
+
         </div>
 
     </section>
 
+    <!-- ==========================================
+     EXPLORE MORE DESTINATIONS
+========================================== -->
+
+    <section class="explore-tours">
+
+        <div class="section-heading">
+
+            <span>EXPLORE MORE DESTINATIONS</span>
+
+            <h2>Discover South India</h2>
+
+            <p>
+                Explore famous temples, beaches, historical landmarks and
+                scenic destinations. Customize your journey with PKMR Services.
+            </p>
+
+        </div>
+
+        <div class="tour-grid" id="tourGrid">
+
+            <!-- Tirupati -->
+
+            <div class="tour-card" data-name="Tirupati">
+                <div class="tour-card-inner">
+
+                    <div class="tour-front">
+                        <img src="{{ url_for('static', filename='images/TirupatiCard.jpg') }}" alt="Tirupati" class="tour-cover-image">
+                        <!-- <div class="tour-overlay">
+                            <h3>TIRUPATI</h3>
+                            <p>Temple City Tour</p>
+                            <span>Click to Explore</span>
+                        </div> -->
+                    </div>
+
+                    
+
+                    <div class="tour-back">
+                        <img src="{{ url_for('static', filename='images/Thirupathi.jpg') }}" alt="Tirupati" class="tour-back-image">
+
+                        <h3>Most Visiting Places</h3>
+                        <ul>
+                            <li>• Padmavathi Temple</li>
+                            <li>• Govindaraja Temple</li>
+                            <li>• Kapila Theertham</li>
+                            <li>• ISKCON Tirupati</li>
+                            <li>• +7 More Places...</li>
+                        </ul>
+                        <button class="contact-tour-btn" onclick="openDestination('tirupati')">
+                            Explore More
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Tirumala -->
+
+            <div class="tour-card" data-name="Tirumala">
+                <div class="tour-card-inner">
+
+                    <div class="tour-front">
+                        <img src="{{ url_for('static', filename='images/ThirumalaCard.jpg') }}" alt="Tirumala" class="tour-cover-image">
+                        <!-- <div class="tour-overlay">
+                            <h3>TIRUMALA</h3>
+                            <p>Sacred Hill Experience</p>
+                            <span>Click to Explore</span>
+                        </div> -->
+                    </div>
+
+                    <div class="tour-back">
+                        <img src="{{ url_for('static', filename='images/Thirumala.jpg') }}" alt="Tirumala" class="tour-back-image">
+                        <h3>Most Visiting Places</h3>
+                        <ul>
+                            <li>• Srivari Temple</li>
+                            <li>• Papavinasam</li>
+                            <li>• Akasa Ganga</li>
+                            <li>• Japali Hanuman Temple</li>
+                            <li>• +5 More Places...</li>
+                        </ul>
+
+                        <button class="contact-tour-btn" onclick="openDestination('tirumala')">
+                            Explore More
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Visakhapatnam -->
+
+            <div class="tour-card" data-name="Visakhapatnam">
+                <div class="tour-card-inner">
+
+                    <div class="tour-front">
+                        <img src="{{ url_for('static', filename='images/VisakhapatnamCard.jpg') }}" alt="Visakhapatnam"
+                            class="tour-cover-image">
+                        <!-- <div class="tour-overlay">
+                            <h3>VIZAG</h3>
+                            <p>Beach & Heritage Tour</p>
+                            <span>Click to Explore</span>
+                        </div> -->
+                    </div>
+
+                    <div class="tour-back">
+                        <img src="{{ url_for('static', filename='images/Visakhapatnam.jpg') }}" alt="Visakhapatnam"
+                            class="tour-back-image">
+                        <h3>Most Visiting Places</h3>
+                        <ul>
+                            <li>• Simhachalam Temple</li>
+                            <li>• RK Beach</li>
+                            <li>• Kailasagiri</li>
+                            <li>• Submarine Museum</li>
+                            <li>• +6 More Places...</li>
+                        </ul>
+
+                        <button class="contact-tour-btn" onclick="openDestination('vizag')">
+                            Explore More
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Chennai -->
+
+            <div class="tour-card" data-name="Chennai">
+
+                <div class="tour-card-inner">
+
+                    <!-- FRONT -->
+                    <div class="tour-front">
+
+                        <img src="{{ url_for('static', filename='images/ChennaiCard.jpg') }}" class="tour-cover-image"
+                            alt="Chennai">
+
+                    </div>
+
+                    <!-- BACK -->
+                    <div class="tour-back">
+                        <img src="{{ url_for('static', filename='images/Chennai.jpg') }}" alt="Chennai"
+                            class="tour-back-image">
+
+                        <h3>Most Visiting Places</h3>
+                        
+                        <ul>
+                            <li>✔ Kapaleeshwarar Temple</li>
+                            <li>✔ Marina Beach</li>
+                            <li>✔ Government Museum</li>
+                            <li>✔ Birla Planetarium</li>
+                            <li>✔ +6 More Places...</li>
+                        </ul>
+
+                        <button class="contact-tour-btn">
+                            Explore More
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Bangalore -->
+
+            <div class="tour-card" data-name="Bangalore">
+                <div class="tour-card-inner">
+                    <div class="tour-front">
+
+                        <img src="{{ url_for('static', filename='images/BengaluruCard.jpg') }}" alt="Bengaluru"
+                            class="tour-cover-image">
+
+                        <!-- <div class="tour-overlay">
+
+                            <span class="explore-text">
+                                Click to Explore
+                            </span>
+
+                        </div> -->
+
+                    </div>
+
+                    <div class="tour-back">
+
+                        <img src="{{ url_for('static', filename='images/Bengaluru.jpg') }}" alt="Bengaluru"
+                            class="tour-back-image">
+
+                        <h3>Most Visiting Places</h3>
+                        <ul>
+                            <li>• ISKCON Bangalore</li>
+                            <li>• Lalbagh</li>
+                            <li>• Cubbon Park</li>
+                            <li>• Bangalore Palace</li>
+                            <li>• +5 More Places...</li>
+                        </ul>
+
+                        <button class="contact-tour-btn" onclick="openDestination('bangalore')">
+                            Explore More
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Hyderabad -->
+
+            <div class="tour-card" data-name="Hyderabad">
+                <div class="tour-card-inner">
+
+                    <div class="tour-front">
+                        <img src="{{ url_for('static', filename='images/HyderabadCard.jpg') }}" alt="Hyderabad"
+                            class="tour-cover-image">
+                        <!-- <div class="tour-overlay">
+                            <h3>HYDERABAD</h3>
+                            <p>Heritage City Tour</p>
+                            <span>Click to Explore</span>
+                        </div> -->
+                    </div>
+
+                    <div class="tour-back">
+
+                        <img src="{{ url_for('static', filename='images/Hyderabad.jpg') }}" alt="Hyderabad"
+                            class="tour-back-image">
+                        <h3>Most Visiting Places</h3>
+                        <ul>
+                            <li>• Charminar</li>
+                            <li>• Golconda Fort</li>
+                            <li>• Birla Mandir</li>
+                            <li>• Ramoji Film City</li>
+                            <li>• +5 More Places...</li>
+                        </ul>
+
+                        <button class="contact-tour-btn" onclick="openDestination('hyderabad')">
+                            Explore More
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Munnar -->
+
+            <div class="tour-card" data-name="Munnar">
+
+                <div class="tour-card-inner">
+
+                    <!-- FRONT -->
+
+                    <div class="tour-front">
+                        <img src="{{ url_for('static', filename='images/MunnarCard.jpg') }}" alt="Munnar" class="tour-cover-image">
+
+
+                        <!-- <div class="tour-overlay">
+
+
+                            <h3>MUNNAR</h3>
+
+                            <p>Tea Hills & Nature Tour</p>
+
+                            <span>Click to Explore</span>
+
+                        </div> -->
+
+                    </div>
+
+                    <!-- BACK -->
+
+                    <div class="tour-back">
+                        <img src="{{ url_for('static', filename='images/Munnar.jpg') }}" alt="Munnar" class="tour-back-image">
+                        <h3>Most Visiting Places</h3>
+
+                        <ul>
+
+                            <li>• Eravikulam National Park</li>
+                            <li>• Tea Museum</li>
+                            <li>• Mattupetty Dam</li>
+                            <li>• Echo Point</li>
+                            <li>• +6 More Places...</li>
+
+                        </ul>
+
+                        <button class="contact-tour-btn" onclick="openDestination('munnar')">
+
+                            Explore More
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Ooty -->
+
+            <div class="tour-card" data-name="Ooty">
+                <div class="tour-card-inner">
+
+                    <div class="tour-front">
+                        <img src="{{ url_for('static', filename='images/OotyCard.jpg') }}" alt="Ooty" class="tour-cover-image">
+                        <!-- <div class="tour-overlay">
+                            
+                         <h3>OOTY</h3>
+                            <p>Hill Station Tour</p>
+                            <span>Click to Explore</span>
+                        </div>  -->
+                    </div>
+
+                    <div class="tour-back">
+                        <img src="{{ url_for('static', filename='images/Ooty.jpg') }}" alt="Ooty" class="tour-back-image">
+                        <h3>Most Visiting Places</h3>
+                        <ul>
+                            <li>• Botanical Garden</li>
+                            <li>• Ooty Lake</li>
+                            <li>• Doddabetta Peak</li>
+                            <li>• Rose Garden</li>
+                            <li>• +5 More Places...</li>
+                        </ul>
+
+                        <button class="contact-tour-btn" onclick="openDestination('ooty')">
+                            Explore More
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Kodaikanl -->
+
+            <div class="tour-card" data-name="Kodaikanal">
+                <div class="tour-card-inner">
+
+                    <div class="tour-front">
+                        <img src="{{ url_for('static', filename='images/KodaikanalCard.jpg') }}" alt="Kodaikanal" class="tour-cover-image">
+                        <!-- <div class="tour-overlay">
+                            
+                            <h3>KODAIKANAL</h3>
+                            <p>Princess of Hill Stations</p>
+                            <span>Click to Explore</span>
+                        </div> -->
+                    </div>
+
+                    <div class="tour-back">
+                        <img src="{{ url_for('static', filename='images/Kodaikanal.jpg') }}" alt="Kodaikanal" class="tour-back-image">
+                        
+                        <h3>Most Visiting Places</h3>
+                        <ul>
+                            <li>• Kodai Lake</li>
+                            <li>• Coaker's Walk</li>
+                            <li>• Bryant Park</li>
+                            <li>• Pillar Rocks</li>
+                            <li>• +5 More Places...</li>
+                        </ul>
+
+                        <button class="contact-tour-btn" onclick="openDestination('kodaikanal')">
+                            Explore More
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Coorg -->
+
+            <div class="tour-card" data-name="Coorg">
+                <div class="tour-card-inner">
+
+                    <div class="tour-front">
+
+                        <img src="{{ url_for('static', filename='images/CoorgCard.jpg') }}" alt="Coorg" class="tour-cover-image">
+
+                        <!-- <div class="tour-overlay">
+                            <h3>COORG</h3>
+                            <p>Coffee Plantation Tour</p>
+                            <span>Click to Explore</span>
+                        </div> -->
+                    </div>
+
+                    <div class="tour-back">
+
+                        <img src="{{ url_for('static', filename='images/Coorg.jpg') }}" alt="Coorg" class="tour-back-image">
+
+
+                        <h3>📍 Most Visiting Places</h3>
+                        <ul>
+                            <li>• Abbey Falls</li>
+                            <li>• Raja's Seat</li>
+                            <li>• Dubare Elephant Camp</li>
+                            <li>• Talakaveri</li>
+                            <li>• +5 More Places...</li>
+                        </ul>
+
+                        <button class="contact-tour-btn" onclick="openDestination('coorg')">
+                            Explore More
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Pondicherry -->
+
+            <div class="tour-card" data-name="Pondicherry">
+                <div class="tour-card-inner">
+
+                    <div class="tour-front">
+                        <img src="{{ url_for('static', filename='images/PondicherryCard.jpg') }}" alt="Pondicherry" class="tour-cover-image">
+                        <!-- <div class="tour-overlay">
+                            
+                            <h3>PONDICHERRY</h3>
+                            <p>French Heritage Tour</p>
+                            <span>Click to Explore</span> 
+                        </div> -->
+                    </div>
+
+                    <div class="tour-back">
+                        <img src="{{ url_for('static', filename='images/Pondicherry.jpg') }}" alt="Pondicherry" class="tour-back-image">
+                        
+                        <h3>Most Visiting Places</h3>
+                        <ul>
+                            <li>• Auroville</li>
+                            <li>• Sri Aurobindo Ashram</li>
+                            <li>• Promenade Beach</li>
+                            <li>• French Quarter</li>
+                            <li>• +5 More Places...</li>
+                        </ul>
+
+                        <button class="contact-tour-btn" onclick="openDestination('pondicherry')">
+                            Explore More
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Goa -->
+
+            <div class="tour-card" data-name="Goa">
+                <div class="tour-card-inner">
+
+                    <div class="tour-front">
+                        <img src="{{ url_for('static', filename='images/GoaCard.jpg') }}" alt="Goa" class="tour-cover-image">
+
+                        <!-- <div class="tour-overlay">
+                            <h3>GOA</h3>
+                            <p>Beach Paradise</p>
+                            <span>Click to Explore</span>
+                        </div> -->
+                    </div>
+
+                    <div class="tour-back">
+                        <img src="{{ url_for('static', filename='images/Goa.jpg') }}" alt="Goa" class="tour-back-image">
+                        <h3>📍 Most Visiting Places</h3>
+                        <ul>
+                            <li>• Baga Beach</li>
+                            <li>• Calangute Beach</li>
+                            <li>• Fort Aguada</li>
+                            <li>• Dudhsagar Falls</li>
+                            <li>• +5 More Places...</li>
+                        </ul>
+
+                        <button class="contact-tour-btn" onclick="openDestination('goa')">
+                            Explore More
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Kerala -->
+
+            <div class="tour-card" data-name="Kerala">
+                <div class="tour-card-inner">
+
+                    <div class="tour-front">
+                        <img src="{{ url_for('static', filename='images/KeralaCard.jpg') }}" alt="Kerala" class="tour-cover-image">
+                        <!-- <div class="tour-overlay">
+                            <h3>KERALA</h3>
+                            <p>God's Own Country</p>
+                            <span>Click to Explore</span>
+                        </div> -->
+                    </div>
+
+                    <div class="tour-back">
+                        <img src="{{ url_for('static', filename='images/Kerala.jpg') }}" alt="Kerala" class="tour-back-image">
+                        <h3>Most Visiting Places</h3>
+                        <ul>
+                            <li>• Munnar</li>
+                            <li>• Alleppey</li>
+                            <li>• Thekkady</li>
+                            <li>• Kovalam Beach</li>
+                            <li>• +6 More Places...</li>
+                        </ul>
+
+                        <button class="contact-tour-btn" onclick="openDestination('kerala')">
+                            Explore More
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
     {% include "components/package_modal.html" %}
     {% include "components/booking_modal.html" %}
+    {% include "components/tour_modal.html" %}
     {% include "components/footer.html" %}
 
 

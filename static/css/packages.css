@@ -419,6 +419,59 @@ body{
 }
 
 /* ==========================================
+   FEATURED PACKAGES TITLE
+========================================== */
+
+.featured-packages .section-heading{
+
+    max-width:850px;
+
+    margin:0 auto 60px;
+
+    text-align:center;
+
+}
+
+.featured-packages .section-heading span{
+
+    display:block;
+
+    color:#d4af37;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    margin-bottom:12px;
+
+}
+
+.featured-packages .section-heading h2{
+
+    font-size:48px;
+
+    color:#222;
+
+    margin-bottom:15px;
+
+}
+
+.featured-packages .section-heading p{
+
+    font-size:18px;
+
+    color:#666;
+
+    line-height:1.7;
+
+}
+
+
+/* ==========================================
    FEATURED PACKAGES
 ========================================== */
 
@@ -1007,3 +1060,477 @@ body{
     }
 
 }
+
+/*==============================
+   DESTINATION FLIP CARD
+==============================*/
+
+.destination-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+    margin-top:60px;
+
+}
+
+.tour-card{
+
+    perspective:1000px;
+
+    aspect-ratio: 3 / 4;
+
+    height: auto;
+
+}
+
+.tour-card-inner{
+
+    position:relative;
+
+    width:100%;
+
+    height:100%;
+
+    transition:transform .8s;
+
+    transform-style:preserve-3d;
+
+}
+
+.tour-card:hover .tour-card-inner{
+
+    transform:rotateY(180deg);
+
+}
+
+.tour-front,
+.tour-back{
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:20px;
+
+    backface-visibility:hidden;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+
+}
+
+.tour-front{
+
+    background:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+.tour-back{
+
+    background:white;
+
+    transform:rotateY(180deg);
+
+    padding:25px;
+
+}
+
+.tour-back h3{
+
+    color:#d4af37;
+
+    margin-bottom:18px;
+
+}
+
+.tour-back ul{
+
+    list-style:none;
+
+    padding:0;
+
+    height:250px;
+
+    overflow-y:auto;
+
+}
+
+.tour-back li{
+
+    margin:8px 0;
+
+    color:#444;
+
+}
+
+.tour-back .details-btn{
+
+    margin-top:20px;
+
+    width:100%;
+
+}
+
+.tour-modal{
+    display:none;          /* VERY IMPORTANT */
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.tour-modal-content{
+    background:#fff;
+    width:900px;
+    max-width:90%;
+    border-radius:20px;
+    padding:35px;
+}
+
+.tour-back{
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+.tour-back ul{
+
+    flex:1;
+
+}
+
+.tour-back .details-btn{
+
+    width:220px;
+
+    margin:25px auto 0;
+
+    display:block;
+
+}
+
+.tour-modal{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.65);
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.tour-back{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.tour-back ul{
+
+    flex:1;
+
+}
+
+.tour-back .details-btn{
+
+    width:220px;
+
+    margin:25px auto 0;
+
+    display:block;
+
+}
+
+/* ==========================================
+   EXPLORE MORE DESTINATIONS
+========================================== */
+
+.explore-tours{
+
+    padding:100px 8%;
+
+    background:#f8f8f8;
+
+}
+
+.tour-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.tour-card{
+
+    perspective:1000px;
+
+    height:420px;
+
+}
+
+.tour-card-inner{
+
+    position:relative;
+
+    width:100%;
+
+    height:100%;
+
+    transition:transform .8s;
+
+    transform-style:preserve-3d;
+
+}
+
+.tour-card:hover .tour-card-inner{
+
+    transform:rotateY(180deg);
+
+}
+
+.tour-front,
+.tour-back{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    backface-visibility:hidden;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.12);
+
+}
+
+.tour-front{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+}
+
+
+.tour-back{
+
+    background:white;
+
+    transform:rotateY(180deg);
+
+    padding:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.tour-back ul{
+
+    flex:1;
+
+    margin-top:15px;
+
+    list-style:none;
+
+}
+
+.tour-back li{
+
+    margin:8px 0;
+
+}
+
+.contact-tour-btn{
+
+    width:100%;
+
+    padding:14px;
+
+    background:#d4af37;
+
+    color:#222;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+@media(max-width:992px){
+
+    .tour-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .tour-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+.tour-back-image{
+
+    width:100%;
+    height:95px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+    margin-bottom:12px;
+
+}
+
+.tour-back{
+
+    overflow-y:auto;
+
+    padding:18px;
+
+}
+
+
+
+.tour-front{
+
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+}
+
+.tour-cover-image{
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    border-radius: inherit;
+
+    transition: transform .35s ease;
+
+}
+
+
+.tour-card:hover .tour-cover-image{
+
+    transform:scale(1.02);
+
+}
+
+
+/* ==========================================
+   EXPLORE MORE DESTINATIONS TITLE
+========================================== */
+
+.explore-tours .section-heading{
+
+    max-width:850px;
+
+    margin:0 auto 60px;
+
+    text-align:center;
+
+}
+
+.explore-tours .section-heading span{
+
+    display:block;
+
+    color:#d4af37;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    margin-bottom:12px;
+
+}
+
+.explore-tours .section-heading h2{
+
+    font-size:48px;
+
+    color:#222;
+
+    margin-bottom:15px;
+
+}
+
+.explore-tours .section-heading p{
+
+    font-size:18px;
+
+    color:#666;
+
+    line-height:1.7;
+
+}
+
+
